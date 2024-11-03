@@ -1,0 +1,12 @@
+services:
+  hbase:
+    image: harisekhon/hbase
+    ports:
+      - "16010:16010" # Master  
+      - "2181:2181" # Zookeeper
+      - "9090:9090" # Thrift  
+    volumes:
+      - hbase-data:/hbase-data  
+
+volumes:
+  hbase-data:
